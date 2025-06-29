@@ -9,7 +9,7 @@ This is a beginner-friendly face recognition system built using Python and OpenC
 - **Real-time Recognition** through webcam feed
 - **Custom Image Dataset Support**
 - **Label Training & Model Saving**
-- Works on both grayscale and RGB images
+- Works on both grayscale and BGR images
 
 ---
 
