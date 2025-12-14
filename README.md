@@ -12,39 +12,35 @@ A modular face recognition system supporting classical (LBPH), modern embedding-
 
 ## Project Structure
 Face_Recognition/  
-├── src/                 # Core logic  
-├── data/                # Dataset (ignored in Git for privacy)  
-├── main.py              # Entry point  
-├── config.yaml  
-├── requirements.txt  
-└── README.md  
+  ── src/                 # Core logic  
+  ── data/                # Dataset (ignored in Git for privacy)  
+  ── main.py              # Entry point  
+  ── config.yaml  
+  ── requirements.txt  
+  ── README.md  
 
 ## Installation
-pip install -r requirements.txt
+    pip install -r requirements.txt
 
 ## Usage 
-## Offline Evaluation
-python main.py lbph
-python main.py facenet
-python main.py compare
+### Offline Evaluation
+    python main.py lbph
+    python main.py facenet
+    python main.py compare
 
-## Live Webcam Inference
-python main.py live_lbph
-python main.py live_facenet
-python main.py live_ensemble
+### Live Webcam Inference
+    python main.py live_lbph
+    python main.py live_facenet
+    python main.py live_ensemble
 
 Press q to exit any live mode.
 
 ## Models
-    LBPH: Classical texture-based face recognition baseline.
-
-    FaceNet: Pretrained deep face embeddings with cosine similarity matching.
-
-    Ensemble: FaceNet-first decision strategy with LBPH as a secondary consistency check.
+-LBPH: Classical texture-based face recognition baseline.
+-FaceNet: Pretrained deep face embeddings with cosine similarity matching.
+-Ensemble: FaceNet-first decision strategy with LBPH as a secondary consistency check.
 
 ## Notes
-Face images are not included in this repository for privacy reasons.
-
-Thresholds are selected empirically using validation data.
-
-Designed for small datasets with limited samples per identity.
+-Face images are not included in this repository for privacy reasons.
+-Thresholds are selected empirically using validation data.
+-Designed for small datasets with limited samples per identity.
