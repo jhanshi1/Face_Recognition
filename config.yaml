@@ -1,0 +1,6 @@
+image_dir: data/images_face
+model_path: models/face_trained.yml
+cascade_path: data/harr_cas.xml
+confidence_threshold: 90
+face_size: [200, 200]
+data_dir: data

@@ -1,0 +1,6 @@
+opencv-contrib-python
+numpy
+pyyaml
+tensorflow
+keras-facenet
+scikit-learn
