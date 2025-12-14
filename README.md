@@ -36,11 +36,11 @@ Face_Recognition/
 Press q to exit any live mode.
 
 ## Models
--LBPH: Classical texture-based face recognition baseline.
--FaceNet: Pretrained deep face embeddings with cosine similarity matching.
--Ensemble: FaceNet-first decision strategy with LBPH as a secondary consistency check.
+- LBPH: Classical texture-based face recognition baseline.
+- FaceNet: Pretrained deep face embeddings with cosine similarity matching.
+- Ensemble: FaceNet-first decision strategy with LBPH as a secondary consistency check.
 
 ## Notes
--Face images are not included in this repository for privacy reasons.
--Thresholds are selected empirically using validation data.
--Designed for small datasets with limited samples per identity.
+- Face images are not included in this repository for privacy reasons.
+- Thresholds are selected empirically using validation data.
+- Designed for small datasets with limited samples per identity.
