@@ -1,26 +1,50 @@
-# 🎯 Face Recognition System using OpenCV
+# Face Recognition System (LBPH + FaceNet + Ensemble)
 
-This is a beginner-friendly face recognition system built using Python and OpenCV. The project demonstrates how to train a computer to recognize multiple faces from image data and make predictions in real-time through webcam.
+A modular face recognition system supporting classical (LBPH), modern embedding-based (FaceNet), and ensemble inference modes with proper train/validation/test evaluation and live webcam deployment.
 
----
- Features
+## Features
+- Person-wise train/validation/test split
+- LBPH baseline face recognition model
+- FaceNet embedding-based recognition using cosine similarity
+- Open-set recognition with unknown identity rejection
+- Ensemble strategy combining FaceNet and LBPH
+- Real-time live webcam inference with selectable modes
 
-- **Face Detection** using Haar Cascade Classifier
-- **Real-time Recognition** through webcam feed
-- **Custom Image Dataset Support**
-- **Label Training & Model Saving**
-- Works on both grayscale and BGR images
+## Project Structure
+Face_Recognition/  
+├── src/                 # Core logic  
+├── data/                # Dataset (ignored in Git for privacy)  
+├── main.py              # Entry point  
+├── config.yaml  
+├── requirements.txt  
+└── README.md  
 
----
+## Installation
+pip install -r requirements.txt
 
-## 📁 Project Structure
+## Usage 
+## Offline Evaluation
+python main.py lbph
+python main.py facenet
+python main.py compare
 
-```bash
-face_recognition_system/
-│
-├── images_face/             # 📂 Training images categorized in folders (1 folder per person)
-├── face_trained.yml         # 🧠 Trained face recognizer model
-├── face_recognition.py      # 🖥️ Real-time face recognition script
-├── faces_train.py           # 🏋️‍♂️ Training script for recognizer
-├── harr_cas.xml             # 🔍 Haar Cascade XML file for face detection
-└── README.md                # 📄 Project overview and instructions
+## Live Webcam Inference
+python main.py live_lbph
+python main.py live_facenet
+python main.py live_ensemble
+
+Press q to exit any live mode.
+
+## Models
+    LBPH: Classical texture-based face recognition baseline.
+
+    FaceNet: Pretrained deep face embeddings with cosine similarity matching.
+
+    Ensemble: FaceNet-first decision strategy with LBPH as a secondary consistency check.
+
+## Notes
+Face images are not included in this repository for privacy reasons.
+
+Thresholds are selected empirically using validation data.
+
+Designed for small datasets with limited samples per identity.
